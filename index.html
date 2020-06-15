@@ -5,46 +5,36 @@
     </head>
     <body>
         <script>
-          
-        
-            function game (computerPlay, playerSelection){
-                //computer play function
-                function computerPlay(){
-                let rannum = Math.floor(Math.random()*3)
-                return rannum ;  
-                }
-                //player play function
-                var playerSelection= prompt("Rock Paper or Scissors?");
-                if (playerSelection=="Rock") {
-                  let rps =  0;
-                }
-                else if (playerSelection=="Paper") {
-                    let rps =  1;
-                }
-                else {
-                    let rps =  2;
-                }
+           
+            
 
-                
-                if (computerPlay == rps){
-                    console.log("same, lame")
-                }
-                else if (computerPlay==0 && rps==1) {
-                    console.log("you won")
-                
-                } 
-                else if (computerPlay==1 && rps==2) {
-                    console.log("you won") 
-                }
-                else if (computerPlay==2 && rps==0) {
-                    console.log("you won") 
+       
+        function game(){
 
-                    }
-                    
-                    else {
-                    console.log("ya lost sucker")
-                }
+        function computerPlay(){
+            let rannum = Math.floor(Math.random()*3)
+            let rps= ["rock","paper","scissors"]
+            return rps[rannum];
+        }
+         let bla = computerPlay();   
+            const playerSelection =prompt("rock, paper, scissors")
+            if (bla==playerSelection){
+                return "same lame";
             }
+            else if ((bla=="rock")&&(playerSelection=="paper")){
+                console.log("Paper beats rock ya win")
+            }
+            else if ((bla=="paper")&&(playerSelection=="scissors")){
+                console.log("Scissors beats paper ya win")
+            }
+            else if ((bla=="scissors")&&(playerSelection=="rock")){
+                console.log("Rock beats paper")
+            }
+            else {
+                console.log(playerSelection +" you lost m8")
+            }
+
+        }    
                
         </script>
     </body>
